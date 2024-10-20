@@ -120,7 +120,7 @@ deleteTodo(id: string) {
   console.log('todo id', id);
   this.appConfig.onStartWaiting();
 
-  this.todoService.delete$(`todos/${id}`).subscribe({
+  this.todoService.delete$(`todos/${id}/`).subscribe({
     next: (res: any) => {
       this.appConfig.onStopWaiting();
       this.todoList = this.todoList.filter(
